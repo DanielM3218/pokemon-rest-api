@@ -19,7 +19,16 @@ class PokemonServiceTest {
 
         // Ensure the details of the pokemons are correct
         assertThat(result[0].name).isEqualTo("Bulbasaur")
+        assertThat(result[0].id).isEqualTo(1)
+        assertThat(result[0].types).containsExactly("Grass", "Poison")
+        assertThat(result[0].pokedexNumber).isEqualTo(1)
+        assertThat(result[0].imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
+
+        assertThat(result[1].id).isEqualTo(2)
         assertThat(result[1].name).isEqualTo("Ivysaur")
+        assertThat(result[1].types).containsExactly("Grass", "Poison")
+        assertThat(result[1].pokedexNumber).isEqualTo(2)
+        assertThat(result[1].imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
     }
 
     @Test
@@ -28,13 +37,18 @@ class PokemonServiceTest {
         val result = pokemonService.getPokemonById(1)
 
         // Ensure the returned pokemon is Bulbasaur
-        assertThat(result).isNotNull
         assertThat(result?.name).isEqualTo("Bulbasaur")
+        assertThat(result?.types).containsExactly("Grass", "Poison")
+        assertThat(result?.pokedexNumber).isEqualTo(1)
+        assertThat(result?.imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
 
-        // Call the getPokemonById function with a non-existent id
-        val nonExistentPokemon = pokemonService.getPokemonById(999)
-
-        // Ensure the pokemon was not found and is null
-        assertThat(nonExistentPokemon).isNull()
     }
+
+    @Test
+    fun `getPokemonById should return null or error for non-existent Pokémon`() {
+        val result = pokemonService.getPokemonById(999)
+
+        assertThat(result).isNull()
+    }
+
 }
