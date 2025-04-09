@@ -1,8 +1,8 @@
 
-package com.example.pokemonfinal.controller
+package com.example.pokemon_api_final.controller
 
-import com.example.pokemonfinal.Model.Pokemon
-import com.example.pokemonfinal.service.PokemonService
+import com.example.pokemon_api_final.Model.Pokemon
+import com.example.pokemon_api_final.service.PokemonService
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

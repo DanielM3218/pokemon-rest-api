@@ -1,4 +1,4 @@
-package com.example.pokemonfinal.service
+package com.example.pokemon_api_final.service
 
 import org.junit.jupiter.api.Test
 import org.assertj.core.api.Assertions.assertThat

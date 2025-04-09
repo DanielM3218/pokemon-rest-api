@@ -1,6 +1,6 @@
-package com.example.pokemonfinal.service
+package com.example.pokemon_api_final.service
 
-import com.example.pokemonfinal.Model.Pokemon
+import com.example.pokemon_api_final.Model.Pokemon
 import org.springframework.stereotype.Service
 
 @Service
