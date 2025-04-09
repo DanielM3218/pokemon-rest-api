@@ -1,11 +1,11 @@
-package com.example.pokemon_api_final
+package com.example.pokemon_api
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PokemonApiFinalApplication
+class PokemonApiApplication
 
 fun main(args: Array<String>) {
-	runApplication<PokemonApiFinalApplication>(*args)
+	runApplication<PokemonApiApplication>(*args)
 }
