@@ -42,7 +42,7 @@ class PokemonControllerTest {
     }
 
     @Test
-    fun `listAllPokemons should return all pokemons from service`() {
+    fun `should return a list of pokemons on successful request`() {
         // Given
         val expectedPokemons = listOf(bulbasaur, ivysaur)
         `when`(pokemonService.getAllPokemons()).thenReturn(expectedPokemons)
