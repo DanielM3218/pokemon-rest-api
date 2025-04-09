@@ -1,7 +1,9 @@
 package com.example.pokemon_api_final.service
 
+import com.example.pokemon_api_final.Enums.PokemonType
 import org.junit.jupiter.api.Test
 import org.assertj.core.api.Assertions.assertThat
+import java.net.URL
 
 class PokemonServiceTest {
 
@@ -20,15 +22,15 @@ class PokemonServiceTest {
         // Ensure the details of the pokemons are correct
         assertThat(result[0].name).isEqualTo("Bulbasaur")
         assertThat(result[0].id).isEqualTo(1)
-        assertThat(result[0].types).containsExactly("Grass", "Poison")
+        assertThat(result[0].types).containsExactly(PokemonType.GRASS, PokemonType.POISON)
         assertThat(result[0].pokedexNumber).isEqualTo(1)
-        assertThat(result[0].imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
+        assertThat(result[0].imageUrl).isEqualTo(URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg"))
 
         assertThat(result[1].id).isEqualTo(2)
         assertThat(result[1].name).isEqualTo("Ivysaur")
-        assertThat(result[1].types).containsExactly("Grass", "Poison")
+        assertThat(result[1].types).containsExactly(PokemonType.GRASS, PokemonType.POISON)
         assertThat(result[1].pokedexNumber).isEqualTo(2)
-        assertThat(result[1].imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
+        assertThat(result[1].imageUrl).isEqualTo(URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg"))
     }
 
     @Test
@@ -38,11 +40,11 @@ class PokemonServiceTest {
 
         // Ensure the returned pokemon is Bulbasaur
         assertThat(result?.name).isEqualTo("Bulbasaur")
-        assertThat(result?.types).containsExactly("Grass", "Poison")
+        assertThat(result?.types).containsExactly(PokemonType.GRASS, PokemonType.POISON)
         assertThat(result?.pokedexNumber).isEqualTo(1)
-        assertThat(result?.imageUrl).isEqualTo("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
-
+        assertThat(result?.imageUrl).isEqualTo(URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg"))
     }
+
 
     @Test
     fun `getPokemonById should return null or error for non-existent Pokémon`() {

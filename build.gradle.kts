@@ -31,7 +31,6 @@ dependencies {
 	testImplementation("org.assertj:assertj-core:3.24.2")
 	testImplementation("org.mockito:mockito-core:5.3.1")
 	testImplementation("org.jetbrains.kotlin:kotlin-test")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 }
 
 kotlin {

@@ -1,6 +1,7 @@
 
 package com.example.pokemon_api_final.controller
 
+import com.example.pokemon_api_final.Enums.PokemonType
 import com.example.pokemon_api_final.Model.Pokemon
 import com.example.pokemon_api_final.service.PokemonService
 import org.assertj.core.api.Assertions.assertThat
@@ -11,6 +12,7 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
 import org.springframework.http.HttpStatus
+import java.net.URL
 
 @ExtendWith(MockitoExtension::class)
 class PokemonControllerTest {
@@ -23,18 +25,19 @@ class PokemonControllerTest {
     private val bulbasaur = Pokemon(
         1,
         "Bulbasaur",
-        listOf("Grass", "Poison"),
+        listOf(PokemonType.GRASS, PokemonType.POISON), // Use enum values instead of strings
         1,
-        "https://img.pokemondb.net/artwork/large/bulbasaur.jpg"
+        URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
     )
 
     private val ivysaur = Pokemon(
         2,
         "Ivysaur",
-        listOf("Grass", "Poison"),
+        listOf(PokemonType.GRASS, PokemonType.POISON), // Use enum values instead of strings
         2,
-        "https://img.pokemondb.net/artwork/large/ivysaur.jpg"
+        URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
     )
+
 
     @BeforeEach
     fun setUp() {

@@ -1,1 +1,1 @@
-rootProject.name = "pokemon-api-final"
+rootProject.name = "pokemon-api"
