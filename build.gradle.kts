@@ -27,10 +27,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	testImplementation("io.mockk:mockk:1.13.2") // MockK for mocking in tests
-	testImplementation("org.assertj:assertj-core:3.24.2")  // AssertJ
-	testImplementation("org.mockito:mockito-core:5.3.1")  // Mockito for Mocking
-	testImplementation("org.jetbrains.kotlin:kotlin-test") // Kotlin test support
+	testImplementation("io.mockk:mockk:1.13.2")
+	testImplementation("org.assertj:assertj-core:3.24.2")
+	testImplementation("org.mockito:mockito-core:5.3.1")
+	testImplementation("org.jetbrains.kotlin:kotlin-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 }
 
