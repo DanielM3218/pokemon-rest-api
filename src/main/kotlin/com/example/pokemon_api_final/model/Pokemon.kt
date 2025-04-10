@@ -1,6 +1,6 @@
-package com.example.pokemon_api_final.Model
+package com.example.pokemon_api_final.model
 
-import com.example.pokemon_api_final.Enums.PokemonType
+import com.example.pokemon_api_final.enums.PokemonType
 import java.net.URL
 
 data class Pokemon(

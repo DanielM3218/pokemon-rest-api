@@ -1,4 +1,4 @@
-package com.example.pokemon_api_final.Enums
+package com.example.pokemon_api_final.enums
 
 enum class PokemonType {
     GRASS,

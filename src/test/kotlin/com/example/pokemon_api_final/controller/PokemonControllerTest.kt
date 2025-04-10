@@ -1,7 +1,7 @@
 package com.example.pokemon_api_final.controller
 
-import com.example.pokemon_api_final.Enums.PokemonType
-import com.example.pokemon_api_final.Model.Pokemon
+import com.example.pokemon_api_final.enums.PokemonType
+import com.example.pokemon_api_final.model.Pokemon
 import com.example.pokemon_api_final.service.PokemonService
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
