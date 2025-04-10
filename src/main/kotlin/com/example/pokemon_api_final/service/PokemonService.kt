@@ -11,19 +11,17 @@ class PokemonService {
         Pokemon(
             1,
             "Bulbasaur",
-            listOf(PokemonType.GRASS, PokemonType.POISON), // Use the PokemonType enum
-            1,
+            listOf(PokemonType.GRASS, PokemonType.POISON),
             URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
         ),
         Pokemon(
             2,
             "Ivysaur",
-            listOf(PokemonType.GRASS, PokemonType.POISON), // Use the PokemonType enum
-            2,
+            listOf(PokemonType.GRASS, PokemonType.POISON),
             URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
         )
     )
 
     fun getAllPokemons(): List<Pokemon> = pokemonList
-    fun getPokemonById(id: Int): Pokemon? = pokemonList.find { it.id == id }
+    fun getPokemonById(pokedexNumber: Int): Pokemon? = pokemonList.find { it.pokedexNumber == pokedexNumber }
 }
