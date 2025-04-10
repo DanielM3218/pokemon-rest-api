@@ -1,8 +1,10 @@
 package com.example.pokemon_api_final.service
 
 import com.example.pokemon_api_final.enums.PokemonType
+import com.example.pokemon_api_final.model.Pokemon
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import org.mockito.Mockito.`when`
 import java.net.URL
 
 class PokemonServiceTest {
@@ -11,8 +13,25 @@ class PokemonServiceTest {
 
     @Test
     fun `should return all pokemons`() {
-        val result = pokemonService.getAllPokemons()
 
+        val expectedPokemons = listOf(
+            Pokemon(
+                1,
+                "Bulbasaur",
+                listOf(PokemonType.GRASS, PokemonType.POISON),
+                URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
+            ),
+            Pokemon(
+                2,
+                "Ivysaur",
+                listOf(PokemonType.GRASS, PokemonType.POISON),
+                URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
+            )
+        )
+
+        `when`(pokemonService.getAllPokemons()).thenReturn(expectedPokemons)
+
+        val result = pokemonService.getAllPokemons()
 
         assertThat(result).isNotEmpty
         assertThat(result).hasSize(2)
@@ -27,6 +46,7 @@ class PokemonServiceTest {
         assertThat(result[1].types).containsExactly(PokemonType.GRASS, PokemonType.POISON)
         assertThat(result[1].imageUrl).isEqualTo(URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg"))
     }
+
 
     @Test
     fun `should return pokemon by pokedexNumber`() {
