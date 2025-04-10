@@ -29,8 +29,6 @@ class PokemonServiceTest {
             )
         )
 
-        `when`(pokemonService.getAllPokemons()).thenReturn(expectedPokemons)
-
         val result = pokemonService.getAllPokemons()
 
         assertThat(result).isNotEmpty
