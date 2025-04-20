@@ -7,16 +7,16 @@ enum class PokemonType {
     WATER,
     ELECTRIC,
     PSYCHIC,
-    NORMAL,
     FLYING,
     BUG,
+    NORMAL,
     GHOST,
-    DRAGON,
-    DARK,
-    STEEL,
-    FAIRY,
     ICE,
-    ROCK,
+    DRAGON,
+    FAIRY,
     FIGHTING,
-    GROUND
+    ROCK,
+    GROUND,
+    STEEL,
+    DARK
 }

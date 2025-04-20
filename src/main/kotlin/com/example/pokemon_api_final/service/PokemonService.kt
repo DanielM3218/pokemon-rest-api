@@ -3,24 +3,19 @@ package com.example.pokemon_api_final.service
 import com.example.pokemon_api_final.enums.PokemonType
 import com.example.pokemon_api_final.model.Pokemon
 import org.springframework.stereotype.Service
+import com.example.pokemon_api_final.enums.AllPokemons
 import java.net.URL
 
 @Service
 class PokemonService {
-    private val pokemonList = listOf(
+    private val pokemonList = AllPokemons.entries.map {
         Pokemon(
-            1,
-            "Bulbasaur",
-            listOf(PokemonType.GRASS, PokemonType.POISON),
-            URL("https://img.pokemondb.net/artwork/large/bulbasaur.jpg")
-        ),
-        Pokemon(
-            2,
-            "Ivysaur",
-            listOf(PokemonType.GRASS, PokemonType.POISON),
-            URL("https://img.pokemondb.net/artwork/large/ivysaur.jpg")
+            it.number,
+            it.pokemonName,
+            it.types,
+            URL(it.imageUrl)
         )
-    )
+    }
 
     fun getAllPokemons(): List<Pokemon> = pokemonList
     fun getPokemonById(pokedexNumber: Int): Pokemon? = pokemonList.find { it.pokedexNumber == pokedexNumber }
