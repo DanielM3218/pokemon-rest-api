@@ -1,9 +1,8 @@
 package com.example.pokemon_api_final.service
 
-import com.example.pokemon_api_final.enums.PokemonType
+import com.example.pokemon_api_final.enums.AllPokemons
 import com.example.pokemon_api_final.model.Pokemon
 import org.springframework.stereotype.Service
-import com.example.pokemon_api_final.enums.AllPokemons
 import java.net.URL
 
 @Service
