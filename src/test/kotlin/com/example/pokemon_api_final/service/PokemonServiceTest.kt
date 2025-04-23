@@ -16,7 +16,7 @@ class PokemonServiceTest {
         val result = pokemonService.getAllPokemons()
 
         assertThat(result).isNotEmpty
-        assertThat(result).hasSize(151) // The pokemonList has 2 Pokémon
+        assertThat(result).hasSize(151)
 
         val expectedPokemons = listOf(
             Pokemon(
